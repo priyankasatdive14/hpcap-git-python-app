@@ -18,6 +18,6 @@ jobs:
       env:
         USER: ${{secrets.USER}}
         PASS: ${{secrets.PASS}}
-      run: docker build . --file Dockerfile --tag priyankasatdive14:$(date +%s)
+      run: docker build . --file Dockerfile --tag priyanka1405:$(date +%s)
            docker login -u $USER -p $PASS
-           docker push priyankasatdive14:$(date +%s)
+           docker push priyanka1405:$(date +%s)

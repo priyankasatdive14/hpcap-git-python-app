@@ -13,12 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v2
     - name: Build the Docker image
       env:
         USER: ${{ secrets.USER }}
         PASS: ${{ secrets.PASS }}
       run: |
-          docker build . --file Dockerfile --tag priyanka1405/github:$(date +%s)
+          docker build . --file Dockerfile --tag priyanka1405/github:latest
           docker login -u $USER -p $PASS
-          docker push priyanka1405/github:$(date +%s)
+          docker push priyanka1405/github:latest

@@ -19,6 +19,6 @@ jobs:
         USER: ${{ secrets.USER }}
         PASS: ${{ secrets.PASS }}
       run: |
-          docker build . --file Dockerfile --tag priyanka1405:$(date +%s)
+          docker build . --file Dockerfile --tag priyanka1405/github:$(date +%s)
           docker login -u $USER -p $PASS
-          docker push priyanka1405:$(date +%s)
+          docker push priyanka1405/github:$(date +%s)
